@@ -15,6 +15,8 @@ public class Main {
             System.out.println("3. Objects and Classes");
             System.out.println("4. Inheritance");
             System.out.println("5. Interfaces");
+            System.out.println("6. Exceptions");
+            System.out.println("7. Collections");
             System.out.println("0. Exit");
 
             int choice = input.nextInt();
@@ -25,6 +27,8 @@ public class Main {
                 case 3 -> OAC();
                 case 4 -> Inhare();
                 case 5 -> Inter();
+                case 6 -> Except();
+                case 7 -> Collect();
                 case 0 -> {
                     System.out.println("Good Bye!");
                     mainBool = false;
@@ -156,7 +160,7 @@ public class Main {
 
         while (!interBool) {
             lineFill();
-            System.out.println("Inheritance Choose a task: (1-4, 0 - Exit)");
+            System.out.println("Interfaces Choose a task: (1-4, 0 - Exit)");
 
             int choice = input.nextInt();
 
@@ -168,6 +172,53 @@ public class Main {
                 case 0 -> {
                     interBool = true;
                     System.out.println("exiting Strings And Tables!");
+                }
+                default -> System.out.println("Wrong Choice!");
+            }
+        }
+    }
+
+    public static void Except() {
+        Exceptions exe = new Exceptions();
+
+        boolean interExcept = false;
+
+        while (!interExcept) {
+            lineFill();
+            System.out.println("Exceptions Choose a task: (1-3, 0 - Exit)");
+
+            int choice = input.nextInt();
+
+            switch (choice) {
+                case 1 -> exe.task_1();
+                case 2 -> exe.task_2();
+                case 3 -> exe.task_3();
+                case 0 -> {
+                    interExcept = true;
+                    System.out.println("exiting Exceptions!");
+                }
+                default -> System.out.println("Wrong Choice!");
+            }
+        }
+    }
+
+    public static void Collect() {
+        Colect col = new Colect();
+
+        boolean interCollect = false;
+
+        while (!interCollect) {
+            lineFill();
+            System.out.println("Collections Choose a task: (1-2, 0 - Exit)");
+
+            int choice = input.nextInt();
+
+            switch (choice) {
+                case 1 -> col.task_1();
+                case 2 -> col.task_2();
+                case 0 -> {
+                    interCollect = true;
+                    System.out.println("exiting Exceptions!");
                 }
                 default -> System.out.println("Wrong Choice!");
             }
